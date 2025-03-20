@@ -10,6 +10,8 @@ import Signup from "./pages/auth/Signup"
 import Overview from './pages/dashboard/Overview'
 import CreateAd from './pages/dashboard/CreateAd'
 import VendorAds from './pages/dashboard/VendorAds'
+import VenLogin from './pages/auth/VenLogin'
+import Vensignup from './pages/auth/Vensignup'
 
 function App() {
 
@@ -28,6 +30,8 @@ function App() {
 
         <Route path='/login' element={<Login />} />
         <Route path='/signup' element={<Signup />} />
+        <Route path='/venlogin' element={<VenLogin/>}/>
+        <Route path='/vensignup' element={<Vensignup/>}/>
 
         <Route path='/dashboard' element={<DashboardLayout/>}>
         <Route index={true} element={<Overview/>}/>
