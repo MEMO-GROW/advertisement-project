@@ -12,6 +12,7 @@ import CreateAd from './pages/dashboard/CreateAd'
 import VendorAds from './pages/dashboard/VendorAds'
 import VenLogin from './pages/auth/VenLogin'
 import Vensignup from './pages/auth/Vensignup'
+import Hero from './pages/user/Hero'
 
 function App() {
 
@@ -22,7 +23,8 @@ function App() {
       <Routes>
 
         <Route path='/' element={<RootLayout/>}>
-        <Route index={true} element={<Landing/>}/>
+        <Route index={true} element={<Hero/>}/>
+        <Route path='landing' element={<Landing/>}/>
         <Route path="adverts" element={<Adverts/>}/>
         <Route path="adverts/:id" element={<SingleAd/>}/>
 
