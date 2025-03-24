@@ -1,5 +1,8 @@
+
 import React, { useEffect, useState } from 'react'
 import { apiGetAllAdverts } from '../../services/adverts'
+import AdvertsCard from '../../components/AdvertsCard'
+
 
 const Adverts = () => {
   const [isLoading, setIsLoading] = useState (false);
@@ -20,7 +23,20 @@ useEffect(() => {
   fetchAds();
 }, [])
   return (
-    <div>Adverts</div>
+    <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 p-3 justify-center'>
+
+      {
+        [1,2].map((AdvertCard,index)=>{
+          return(
+            <AdvertsCard
+            key={index}
+            
+            />
+          )
+        })
+      }
+
+    </div>
   )
 }
 

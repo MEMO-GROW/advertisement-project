@@ -1,8 +1,11 @@
 import React from 'react'
+import SingleAdsCard from '../../components/SingleAdsCard'
 
 const SingleAd = () => {
   return (
-    <div>SingleAd</div>
+    <div>
+      <SingleAdsCard/>
+    </div>
   )
 }
 
