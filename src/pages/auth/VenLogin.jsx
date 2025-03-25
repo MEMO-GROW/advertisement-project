@@ -1,4 +1,6 @@
 import React from 'react'
+import { Link } from 'react-router';
+
 
 const VenLogin = () => {
   return (
@@ -38,6 +40,10 @@ const VenLogin = () => {
           >
             Login
           </button>
+
+          <div className='w-full flex justify-center py-4'>
+            <p>Do not have an account? <Link to={'/vensignup'} className='text-blue-800'>SignUp</Link></p>
+          </div>
         </form>
       </div>
     </div>

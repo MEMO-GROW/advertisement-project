@@ -3,13 +3,12 @@ import { apiSignup } from '../../services/auth';
 import { Link } from 'react-router';
 
 const Signup = () => {
-  const handleSubmit = async (data) => {
-    const payload = {
-      firstName: data.firstname,
-      lastName: data.lastName
-    };
+  const handleSubmit = async (event) => {
+    event.preventDefault()  
+    const formData = new FormData(event.target);
     try {
-      await apiSignup()
+     const response= await apiSignup(formData);
+     console.log(response)
     } catch (error) {
       console.log(error);
     }
@@ -26,7 +25,7 @@ const Signup = () => {
             </label>
             <input
               type="text"
-              id="fullName"
+              name="fullName"
               className="w-full px-4 py-2 border rounded-lg"
               placeholder="Enter your full name"
               required
@@ -38,7 +37,7 @@ const Signup = () => {
             </label>
             <input
               type="email"
-              id="email"
+              name="email"
               className="w-full px-4 py-2 border rounded-lg"
               placeholder="Enter your email"
               required
@@ -50,7 +49,7 @@ const Signup = () => {
             </label>
             <input
               type="password"
-              id="password"
+              name="password"
               className="w-full px-4 py-2 border rounded-lg"
               placeholder="Enter your password"
               required
@@ -62,7 +61,7 @@ const Signup = () => {
             </label>
             <input
               type="password"
-              id="confirmPassword"
+              name="confirmPassword"
               className="w-full px-4 py-2 border rounded-lg"
               placeholder="Confirm your password"
               required

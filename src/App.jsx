@@ -21,24 +21,24 @@ function App() {
 
     <BrowserRouter>
       <Routes>
-
-        <Route path='/' element={<RootLayout/>}>
-        <Route index={true} element={<Hero/>}/>
-        <Route path='landing' element={<Landing/>}/>
-        <Route path="adverts" element={<Adverts/>}/>
-        <Route path="adverts/:id" element={<SingleAd/>}/>
+        <Route path='/' element={<Hero />} />
+        
+        <Route element={<RootLayout />}>
+          <Route path='/landing' element={<Landing />} />
+          <Route path="/adverts" element={<Adverts />} />
+          <Route path="/adverts/:id" element={<SingleAd />} />
 
         </Route>
 
         <Route path='/login' element={<Login />} />
         <Route path='/signup' element={<Signup />} />
-        <Route path='/venlogin' element={<VenLogin/>}/>
-        <Route path='/vensignup' element={<Vensignup/>}/>
+        <Route path='/venlogin' element={<VenLogin />} />
+        <Route path='/vensignup' element={<Vensignup />} />
 
-        <Route path='/dashboard' element={<DashboardLayout/>}>
-        <Route index={true} element={<Overview/>}/>
-        <Route path='create-ad' element={<CreateAd/>}/>
-        <Route path='ads' element={<VendorAds/>} />
+        <Route path='/dashboard' element={<DashboardLayout />}>
+          <Route index={true} element={<Overview />} />
+          <Route path='create-ad' element={<CreateAd />} />
+          <Route path='ads' element={<VendorAds />} />
         </Route>
       </Routes>
     </BrowserRouter>
