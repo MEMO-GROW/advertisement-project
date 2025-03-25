@@ -1,11 +1,19 @@
 import {apiClient} from "./config"
 export const apiSignup =(payload) => {
     return(
-        apiClient.post("/users/register", payload)
+        apiClient.post("/users/register", payload,{
+            headers: {
+                "Content-Type": 'application/json'
+            }
+        })
     )
 }
 
-export const apilogin = async(payload) => apiClient.post("/users/login", payload);
+export const apiLogin = async(payload) => apiClient.post("/users/login", payload, {
+    headers:{
+        "Content-Type": 'application/json'
+    }
+});
 
 export const apiVendorSignup =async(payload) => {
     return(

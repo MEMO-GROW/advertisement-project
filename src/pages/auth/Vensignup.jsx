@@ -1,4 +1,6 @@
 import React from 'react'
+import { Link } from 'react-router'
+
 
 const Vensignup = () => {
   return (
@@ -10,6 +12,7 @@ const Vensignup = () => {
            <label htmlFor="Business Name" className='block text-sm font-medium text-gray-700'>Business Name</label>
             <input className="w-full px-4 py-2 mt-1 border rounded-lg "
           type="text"
+          name='businessName'
           placeholder='Enter Business Name' 
           required/>
           </div>
@@ -18,6 +21,7 @@ const Vensignup = () => {
             <label htmlFor="contact person name" className='block text-sm font-medium text-gray-700'>Contact Person Name</label>
             <input  className='w-full px-4 py-2 mt-1 border rounded-lg'
              type="text"
+             name='contactPerson'
           placeholder='Enter contact person name'
           required />
           </div>
@@ -26,6 +30,7 @@ const Vensignup = () => {
             <label htmlFor="email" className='block text-sm font-medium text-gray-700'>Email</label>
           <input  className='w-full px-4 py-2 mt-1 border rounded-lg '
            type="email"
+           name='email'
           placeholder='Enter email'
           required/>
           </div>
@@ -34,6 +39,7 @@ const Vensignup = () => {
           <label htmlFor="phone number" className='block text-sm font-medium text-gray-700'>Phone Number</label>
         <input  className='w-full px-4 py-2 mt-1 border rounded-lg '
         type="tel"
+        name='phoneNumber'
           placeholder='Enter phone number'
           required />
         </div>
@@ -42,6 +48,7 @@ const Vensignup = () => {
           <label htmlFor="password" className='block text-sm font-medium text-gray-700'>Password</label>
          <input  className='w-full px-4 py-2 mt-1 border rounded-lg'
          type="password" 
+         name='password'
           placeholder='Enter password'
           required/>
          </div>
@@ -50,6 +57,7 @@ const Vensignup = () => {
           <label htmlFor="confirm password" className='block text-sm font-medium text-gray-700'>Confirm Password</label>
          <input  className='w-full px-4 py-2 mt-1 border rounded-lg '
          type="password"
+         name='confirmPassword'
           placeholder='Confirm password'
           required/>
          </div>
@@ -58,6 +66,7 @@ const Vensignup = () => {
           <label htmlFor="business address" className='block text-sm font-medium text-gray-700'>Business Address</label>
          <input  className='w-full px-4 py-2 mt-1 border rounded-lg '
          type="text"
+         name='businessAdress'
           placeholder='Enter business address'
           required />
          </div>
@@ -75,6 +84,7 @@ const Vensignup = () => {
             <label htmlFor="website" className='block text-sm font-medium text-gray-700'>Website (Optional)</label>
           <input   className='w-full px-4 py-2 mt-1 border rounded-lg '
            type="url"
+           name='website'
           placeholder='Enter website URL' />
           </div>
 
@@ -92,6 +102,10 @@ const Vensignup = () => {
 
           <button type='submit' className='w-full px-4 py-2 text-white bg-indigo-600 rounded-lg hover:bg-fuchsia-500 '>Sign Up</button>
         </form>
+
+        <div className='w-full flex justify-center py-4'>
+            <p>Already have an account? <Link to={'/venlogin'} className='text-blue-800'>Login</Link></p>
+          </div>
       </div>
     </div>
   )
