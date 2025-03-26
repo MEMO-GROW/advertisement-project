@@ -11,14 +11,14 @@ const CreateAd = () => {
           <div className="grid grid-cols-2 gap-4">
             <input
               type="text"
-              name="#"
+              name="productName"
               placeholder="Enter Product Name"
               className="w-full border p-3 rounded"
               required
             />
             <input
               type="number"
-              name="#"
+              name="price"
               placeholder="Enter  Product Price"
               className="w-full border p-3 rounded"
               required
@@ -27,7 +27,7 @@ const CreateAd = () => {
           <div className="grid grid-cols-2 gap-3">
             <input
               type="file"
-              name="#"
+              name="images"
               placeholder="#"
               className="w-full border p-3 rounded"
               required
@@ -38,66 +38,33 @@ const CreateAd = () => {
               required
             >
               <option value="">Select Category</option>
-              <option value="#">lol</option>
-              <option value="#">lol</option>
-              <option value="#">lol</option>
-              <option value="#">lol</option>
-              <option value="#">lol</option>
-              <option value="#">lol</option>
-            </select>
-          </div>
-
-          <div className="grid grid-cols-2 gap-4">
-            <input
-              type="text"
-              name="#"
-              placeholder="Enter Your Location"
-              className="w-full border p-3 shadow-sm rounded"
-              required
-            />
-            <select
-              name="Region"
-              className="w-full border p-3 rounded"
-              required
-            >
-              <option value="">Select Region</option>
-              <option value="Ahafo">Ahafo</option>
-              <option value="Ashanti">Ashanti</option>
-              <option value="Bono">Bono</option>
-              <option value="Bono East">Bono East</option>
-              <option value="Central">Central</option>
-              <option value="Eastern">Eastern</option>
-              <option value="Greater Accra">Greater Accra</option>
-              <option value="North East">North East</option>
-              <option value="Northern">Northern</option>
-              <option value="Oti">Oti</option>
-              <option value="Savannah">Savannah</option>
-              <option value="Upper East">Upper East</option>
-              <option value="Upper West">Upper West</option>
-              <option value="Volta">Volta</option>
-              <option value="Western">Western</option>
-              <option value="Western North">Western North</option>
+              <option value="clothing">Clothing</option>
+              <option value="footWear">FootWear</option>
+              <option value="bags and Wallet">Bags and Wallet</option>
+              <option value="jewelry and Watches">Jewelry and Watches</option>
+              <option value="accessories">Accessories</option>
+              <option value="cosmetics">Cosmetics</option>
             </select>
           </div>
 
           <div className="grid grid-cols-2 gap-4">
             <input
               type="number"
-              name="#"
+              name="stockQuantity"
               placeholder=" Enter Stock Quantity"
               className="w-full border p-3 rounded"
               required
             />
             <input
-              type="number"
-              name="#"
-              placeholder="Enter your Phone Number"
+              type="text"
+              name="vendor"
+              placeholder="Enter your Name"
               className="w-full border p-3 rounded"
               required
             />
           </div>
           <textarea
-            name="#"
+            name="description"
             placeholder="Enter Product Discription"
             className="w-full border p-3 rounded"
             required
