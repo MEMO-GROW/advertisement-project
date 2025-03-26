@@ -38,10 +38,12 @@ const Landing = () => {
             <div className='w-full md:w-40'>
               <select className='w-full px-4 py-2 rounded-md border outline-none'>
                 <option value="">All Categories</option>
-                <option value="">1</option>
-                <option value="">2</option>
-                <option value="">3</option>
-                <option value="">4</option>
+                <option value="">Clothing</option>
+                <option value="">Footwear</option>
+                <option value="">Bags and Wallet</option>
+                <option value="">Jewelry and Watches</option>
+                <option value="">Accessories</option>
+                <option value="">Cometics</option>
               </select>
             </div>
 
