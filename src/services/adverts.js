@@ -12,7 +12,7 @@ export const apiGetAllAdverts = async () => apiClient.get("/adverts", {
     }
 });
 
-export const apiGetVendorAdverts = async () => apiClient.get("/vendor-adverts", {
+export const apiGetVendorAdverts = async () => apiClient.get("/ads", {
     headers: {
         Authorization: `Bearer ${localStorage.getItem('token')}`
     }
