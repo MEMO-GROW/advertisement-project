@@ -1,13 +1,27 @@
 import React from "react";
+import { apiAddAdvert } from "../../services/adverts";
+
+
 
 const CreateAd = () => {
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    const data = new FormData(event.target);
+    try {
+      const response = await apiAddAdvert(data);
+      console.log(response);
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
     <div className="flex items-center justify-center min-h-screen ">
       <div className="bg-white shadow-lg rounded-lg p-6 w-[600px] ml-[170px] ">
         <div className="flex flex-col justify-center items-center">
           <h1> Add New Product</h1>
         </div>
-        <form className="space-y-4 pt-5">
+        <form onSubmit={handleSubmit} className="space-y-4 pt-5">
           <div className="grid grid-cols-2 gap-4">
             <input
               type="text"

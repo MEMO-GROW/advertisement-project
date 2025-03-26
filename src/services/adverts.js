@@ -1,6 +1,6 @@
 import { apiClient } from "./config";
 
-export const apiAddAdvert = async (payload) => apiClient.post("/adverts", payload, {
+export const apiAddAdvert = async (payload) => apiClient.post("/ads", payload, {
     headers: {
         Authorization: `Bearer ${localStorage.getItem('token')}`
     }
