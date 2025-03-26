@@ -5,6 +5,8 @@ import CategoryCard from '../../components/CategoryCard'
 import LatestAds from '../../components/LatestAds'
 
 const Landing = () => {
+
+  
   return (
     <div>
       {/* Hero page */}
@@ -58,7 +60,9 @@ const Landing = () => {
 
 
       {/* category cards */}
-      <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3 p-3 justify-center w-[60%] ml-[20%]'>
+      <div className='flex items-center justify-center flex-col gap-7'>
+        <h1 className='text-3xl font-bold text-gray-800'>Popular Categories</h1>
+      <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3 p-3 justify-center w-[60%]'>
         {
           [1, 2, 3, 4, 5].map(
             (CatCard, index) => {
@@ -72,6 +76,7 @@ const Landing = () => {
           )
         }
 
+      </div>
       </div>
 
       {/* latest cards */}
