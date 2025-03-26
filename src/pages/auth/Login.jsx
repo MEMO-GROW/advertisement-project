@@ -9,6 +9,7 @@ const Login = () => {
     const formData = new FormData(event.target);
     try {
       const res = await apiLogin(formData);
+      localStorage.setItem('token', res.data.accessToken);
       console.log(res);
       
     } catch (error) {

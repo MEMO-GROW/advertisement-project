@@ -25,7 +25,7 @@ const Signup = () => {
             </label>
             <input
               type="text"
-              name="fullName"
+              name="username"
               className="w-full px-4 py-2 border rounded-lg"
               placeholder="Enter your full name"
               required
@@ -67,9 +67,16 @@ const Signup = () => {
               required
             />
           </div>
+
+          <div>
+          <label htmlFor="business category" className='block text-sm font-medium text-gray-700'>Role</label>
+          <select name='role' className="w-full px-4 py-2 mt-1 border rounded-lg" required>
+            <option  value="user">User</option>
+          </select>
+         </div>
           <button
             type="submit"
-            className="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition duration-200"
+            className="w-full mt-5 bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition duration-200"
           >
             Sign Up
           </button>
