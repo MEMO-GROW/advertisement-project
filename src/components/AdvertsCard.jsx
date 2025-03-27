@@ -1,5 +1,6 @@
 import { Disc, MapIcon, MapPinIcon, ReceiptCent } from 'lucide-react'
 import React from 'react'
+import { Link } from 'react-router'
 
 const AdvertsCard = ({ad}) => {
   return (
@@ -15,14 +16,10 @@ const AdvertsCard = ({ad}) => {
         {/* Category */}
         <span className="flex items-center gap-1">
           <Disc className="h-4 w-4" />
-          <span className="text-gray-700 font-medium">{ad.catagory}</span>
+          <span className="text-gray-700 font-medium">{ad.category}</span>
         </span>
 
-        {/* Location */}
-        <span className="flex items-center gap-1">
-          <MapPinIcon className="h-4 w-4 text-gray-700" />
-          <span className="text-gray-700 font-medium">London</span>
-        </span>
+        
 
         {/* Price */}
         <span className="flex items-center gap-1 text-green-600 font-semibold">
@@ -43,12 +40,12 @@ const AdvertsCard = ({ad}) => {
 
         {/* View Details + Icons */}
         <div className="flex items-center justify-between">
-          <a
-            href="#"
+          <Link
+            to={`/adverts/${ad.id}`}
             className="text-blue-500 text-sm font-medium hover:underline"
           >
             View Details...
-          </a>
+          </Link>
           
         </div>
       </div>
