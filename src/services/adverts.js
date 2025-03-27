@@ -24,7 +24,7 @@ export const apiUpdateAdverts = async (id, payload) => apiClient.patch(`/adverts
     }
 })
 
-export const apiGetSingleAd = async (id) => apiClient.get(`/adverts/${id}`, {
+export const apiGetSingleAd = async (id) => apiClient.get(`/ads/67e2dc5e6be60c5c10991a63${id}`, {
     headers: {
         Authorization: `Bearer ${localStorage.getItem('token')}`
     }

@@ -1,7 +1,7 @@
 import { HeartCrackIcon } from "lucide-react";
 import React from "react";
 
-const SingleAdsCard = () => {
+const SingleAdsCard = ({ad={}}) => {
   return (
     <div className="bg-gray-100 min-h-screen p-6">
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-6">
@@ -28,11 +28,7 @@ const SingleAdsCard = () => {
               can elect to charge users to feature their ads in high-traffic
               site areas for increased engagement and visibility.
             </p>
-            <p className="text-gray-700 text-sm leading-relaxed">
-              ClassiAds can also integrate with MailChimp, enabling
-              communication between admin and sellers and buyers and sellers.
-              You can make additional customizations with Elementor.
-            </p>
+            
           </div>
         </div>
 
@@ -45,7 +41,7 @@ const SingleAdsCard = () => {
                 {/* change this  */}
                 <HeartCrackIcon />
               </span>
-              <span>299</span>
+              <span>{ad.price}</span>
             </span>
           </div>
 
