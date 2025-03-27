@@ -5,7 +5,7 @@ import { NavLink } from "react-router";
 const Sidebar = () => {
   return (
     <div className="flex flex-col w-60 bg-white h-screen py-4 px-2 gap-y-6 fixed left-0 top-0">
-      <span className="text-black">Elegance</span>
+      <span className="text-black">MEMO</span>
       <div className="flex flex-col gap-y-6">
         {K.NAVLINKS.map((link, index) => {
           return (

@@ -20,7 +20,7 @@ export default {
         },
         {
             name: "Profile",
-            path: "/dashboard/VendorProfile",
+            path: "/dashboard/Vendor-profile",
             icon: User,
         },
         {
