@@ -4,9 +4,9 @@ import { Link } from 'react-router'
 
 const Navbar = () => {
   return (
-    <nav className='flex flex-col items-center py-4'>
+    <nav className='flex flex-col items-center py-4 bg-gray-300 '>
       <div className='text-center'>
-      <h1 className='text-3xl font-bold'>MEMO</h1>
+      <h1 className='text-3xl font-bold'>MEMO_TRENDS</h1>
       <p className='text-sm text-gray-500'>made on earth for humans</p>
       </div>
 

@@ -1,9 +1,11 @@
 import React from 'react'
-import { Link } from 'react-router'
+import { Link, useNavigate } from 'react-router'
 import { apiVendorSignup } from '../../services/auth'
 
 
+
 const Vensignup = () => {
+   const navigate = useNavigate() //for navigation
   const handleSubmit = async (event) => {
     // prevent default submit bahaviour
     event.preventDefault();
@@ -14,6 +16,8 @@ const Vensignup = () => {
     try {
       const response = await apiVendorSignup(data);
       console.log(response)
+      navigate('/venlogin');
+
     } catch (error) {
       console.log(error);
     }finally{

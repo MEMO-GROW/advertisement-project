@@ -1,19 +1,29 @@
 import React from 'react'
 import { Link } from 'react-router';
 import { apiLogin } from '../../services/auth';
+import { useNavigate } from 'react-router';
 
 const Login = () => {
+  const navigate = useNavigate() //for navigation
   // define 
   const handleSubmit = async(event) =>{
     event.preventDefault();
     const formData = new FormData(event.target);
     try {
       const res = await apiLogin(formData);
+      const role = res.data.role; //grabing the role
       localStorage.setItem('token', res.data.accessToken);
+      localStorage.setItem('role', role); //saving the role in the localstorage
       console.log(res);
       
+      //for navigating roles
+      if(role=== "user"){
+        navigate('/landing');
+      }
+
     } catch (error) {
       console.log(error)
+      
     }
 
   }

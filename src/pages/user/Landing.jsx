@@ -6,19 +6,20 @@ import LatestAds from '../../components/LatestAds'
 
 const Landing = () => {
 
-  
+
   return (
     <div>
       {/* Hero page */}
-      <div className='relative z-10 flex flex-col items-center justify-center h-screen'>
-        <div className='bg-amber-500 text-center'>
+      <div className="relative z-10 flex flex-col items-center justify-center h-screen bg-[url('assets/images/image5.png')] bg-no-repeat bg-cover bg-center">
+        <div className="bg-black opacity-30 w-full h-full  absolute"></div>
+        <div className=' text-center bg-transparent backdrop-blur-lg rounded-2xl p-5 '>
           <h1 className='text-4xl font-bold'>Elegance Within Reach. Where Fashion Awakens Desire</h1>
           <p className='mt-2 text-xl'>Browse over 15 million exquisite fashion and accessory pieces, with new styles curated daily</p>
         </div>
 
         {/* search bar section */}
-        <div className='w-full max-w-4xl p-4'>
-          <div className='flex flex-wrap md:flex-nowrap gap-3 px-4 py-4 rounded-lg shadow-md w-full '>
+        <div className='w-full max-w-4xl p-4 bg-transparent backdrop-blur-lg rounded-lg mt-5'>
+          <div className='flex flex-wrap md:flex-nowrap gap-3 px-4 py-4 rounded-lg shadow-md w-full text-whit '>
 
             <div className='w-full md:w-64'>
               <input type="text"
@@ -62,21 +63,21 @@ const Landing = () => {
       {/* category cards */}
       <div className='flex items-center justify-center flex-col gap-7'>
         <h1 className='text-3xl font-bold text-gray-800'>Popular Categories</h1>
-      <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3 p-3 justify-center w-[60%]'>
-        {
-          [1, 2, 3, 4, 5].map(
-            (CatCard, index) => {
-              return (
-                <CategoryCard
-                  key={index}
+        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3 p-3 justify-center w-[60%]'>
+          {
+            [1, 2, 3, 4, 5].map(
+              (CatCard, index) => {
+                return (
+                  <CategoryCard
+                    key={index}
 
-                />
-              )
-            }
-          )
-        }
+                  />
+                )
+              }
+            )
+          }
 
-      </div>
+        </div>
       </div>
 
       {/* latest cards */}
@@ -97,29 +98,28 @@ const Landing = () => {
       </div>
 
 
-      <div className="h-screen md:w-1/2 mx-auto flex flex-col items-center justify-center">
-        <h2 className="text-3xl font-light mb-6">Our Story</h2>
-        <div className="w-24 h-1 bg-gray-200 mb-8 mx-auto"></div>
-        <p className="text-gray-600 leading-relaxed mb-8">
-          Founded in 2018, ELEGANCE was born from a passion for creating
-          timeless pieces that blend modern trends with classic design.
-          Our commitment to quality materials and ethical manufacturing
-          ensures that each item in our collection is not only beautiful
-          but sustainably produced.
-        </p>
-        <p className="text-gray-600 leading-relaxed mb-12">
-          We believe that fashion should be accessible, versatile, and
-          expressive. Our team of designers work tirelessly to bring you
-          collections that help you look and feel your best, whatever the
-          occasion.
-        </p>
-        <button className="px-8 py-3 border border-gray-900 text-gray-900 font-medium transition duration-300 hover:bg-gray-900 hover:text-white">
-          Read More About Us
-        </button>
+      <div className="bg-amber-300">
+        <div className="h-screen w-full md:w-3/4 lg:w-1/2 mx-auto flex items-center justify-center">
+          <div className="bg-[url('assets/images/image2.png')] bg-cover bg-repeat h-full w-full flex flex-col items-center px-4 sm:px-30 md:px-20 lg:px-40">
+            <h2 className="text-3xl md:text-4xl font-light text-center mt-10">Our Story</h2>
+
+            <p className="text-gray-600 text-sm sm:text-base leading-relaxed mb-8 my-10 text-center">
+              Founded in 2018, MEMO was born from a passion for creating timeless pieces that blend modern
+              trends with classic design. Our commitment to quality materials and ethical manufacturing
+              ensures that each item in our collection is not only beautiful but sustainably produced.
+            </p>
+
+            <p className="text-gray-600 text-sm sm:text-base leading-relaxed mb-12 text-center">
+              We believe that fashion should be accessible, versatile, and expressive. Our team of designers
+              work tirelessly to bring you collections that help you look and feel your best, whatever the occasion.
+            </p>
+          </div>
+        </div>
       </div>
+
+
+
     </div>
-
-
 
 
   )

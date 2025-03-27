@@ -11,7 +11,8 @@ export const apiSignup = (payload) => {
 
 export const apiLogin = async (payload) => apiClient.post("/user/login", payload, {
     headers: {
-        "Content-Type": 'application/json'
+        "Content-Type": 'application/json',
+        Authorization: localStorage.getItem('token')
     }
 });
 

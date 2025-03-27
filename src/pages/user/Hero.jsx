@@ -3,15 +3,16 @@ import { Link } from 'react-router'
 
 const Hero = () => {
   return (
-    <div className='min-h-screen flex items-center justify-center bg-black'>
-        <div className='flex flex-col justify-center px-4 sm:px-6 lg:px-8 bg-amber-200'>
-        <div className=' bg-amber-950 max-w-3xl mx-auto text-center'>
-            <h1 className='text-4xl font-extrabold tracking-tight text-white sm:text-5xl md:text-6xl'>MEMO</h1>
-           <p className='mt-3 text-xl text-gray-300'>Redefining Fashion. Inspiring Confidence</p>
+    <div className=" min-h-screen flex items-center justify-center bg-[url('assets/images/image4.png')] bg-no-repeat bg-cover bg-center bg-opacity-5 ">
+      <div className="bg-black opacity-60 w-full h-full  absolute"></div>
+        <div className='relative w-[70%] flex flex-col justify-center px-4 sm:px-6 lg:px-8 h-full'>
+        <div className='w-[100%]  max-w-5xl mx-auto text-center'>
+            <h1 className='tracking-widest font-extrabold text-white sm:text-5xl md:text-8xl'>MEMO</h1>
+           <p className='mt-3 text-2xl text-gray-300'>Redefining Fashion. Inspiring Confidence</p>
         </div>
 
         <div className='mt-8 flex justify-center'>
-            <Link to="landing" className='px-8 py-3 border border-transparent text-base font-medium rounded-md bg-white hover:bg-gray-500 md:py-4 md:text-lg md:px-10'>Explore Collections</Link>
+            <Link to="/popup" className='px-8 py-3 border border-transparent text-base font-medium rounded-md  backdrop-blur-lg bg-opacity-5 hover:bg-gray-500 md:py-4 md:text-lg md:px-10'>Explore Collections</Link>
         </div>
         </div>
     </div>
