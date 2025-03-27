@@ -9,8 +9,11 @@ export const apiGetAllAdverts = async () =>
 export const apiGetVendorAdverts = async () =>
   apiClient.get("/ads");
 
-export const apiUpdateAdverts = async (id, payload) =>
-  apiClient.patch(`/adverts/${id}`, payload);
+export const apiUpdateAdverts = async (id,) =>
+  apiClient.patch(`/ad/${id}`);
 
 export const apiGetSingleAd = async (id) =>
-  apiClient.get(`/ads/${id}`, );
+  apiClient.get(`/ad/${id}`);
+
+export const apiDeleteVendorById = async (id) =>
+  apiClient.delete(`/ad/${id}`);

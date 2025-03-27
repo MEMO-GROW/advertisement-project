@@ -23,10 +23,10 @@ export default {
             path: "/dashboard/VendorProfile",
             icon: User,
         },
-        // {
-        //     name: "Settings",
-        //     path: "/dashboard",
-        //     icon: Settings,
-        // },
+        {
+            name: "UpDate Product",
+            path: "/dashboard/edit",
+            icon: Settings,
+        },
     ]
 }

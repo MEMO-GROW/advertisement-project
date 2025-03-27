@@ -14,6 +14,7 @@ import VenLogin from './pages/auth/VenLogin'
 import Vensignup from './pages/auth/Vensignup'
 import Hero from './pages/user/Hero'
 import Popup from './pages/user/Popup'
+import UpdateProduct from './pages/dashboard/UpdateProduct'
 
 function App() {
 
@@ -41,6 +42,7 @@ function App() {
           <Route index={true} element={<Overview />} />
           <Route path='create-ad' element={<CreateAd />} />
           <Route path='ads' element={<VendorAds />} />
+          <Route path='edit/:id' element={<UpdateProduct/>} />
         </Route>
       </Routes>
     </BrowserRouter>
