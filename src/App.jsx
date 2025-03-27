@@ -1,3 +1,4 @@
+
 import { BrowserRouter, Routes, Route } from "react-router";
 import "./App.css";
 import RootLayout from "./layouts/RootLayout";
@@ -15,6 +16,9 @@ import Vensignup from "./pages/auth/Vensignup";
 import Hero from "./pages/user/Hero";
 import Popup from "./pages/user/Popup";
 import VendorProfile from "./pages/dashboard/VendorProfile";
+import UpdateProduct from './pages/dashboard/UpdateProduct'
+
+
 
 function App() {
   return (
@@ -39,6 +43,9 @@ function App() {
           <Route path="create-ad" element={<CreateAd />} />
           <Route path="ads" element={<VendorAds />} />
           <Route path="vendor-profile" element={<VendorProfile />} />
+          <Route path='edit/:id' element={<UpdateProduct/>} />
+
+
         </Route>
       </Routes>
     </BrowserRouter>
