@@ -1,7 +1,7 @@
 import { HeartCrackIcon } from "lucide-react";
 import React from "react";
 
-const SingleAdsCard = ({ad={}}) => {
+const SingleAdsCard = () => {
   return (
     <div className="bg-gray-100 min-h-screen p-6">
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-6">
@@ -9,7 +9,7 @@ const SingleAdsCard = ({ad={}}) => {
         <div className="lg:col-span-2 bg-white rounded-2xl shadow p-6">
           {/* Product Name BEFORE Image */}
           <h1 className="text-2xl font-bold text-gray-800 mb-4">
-            iPhone 14 Pro Max
+            
           </h1>
           <img
             src="https://images.unsplash.com/photo-1506744038136-46273834b3fb"
@@ -21,12 +21,7 @@ const SingleAdsCard = ({ad={}}) => {
           <div className="space-y-4">
             <h2 className="text-base font-bold  text-gray-800">Description:</h2>
             <p className="text-gray-700 text-sm leading-relaxed">
-              ClassiAds includes 20+ category templates, making it great for
-              those hoping to create specific classified sites. As an admin,
-              simply approve seller applications, and they can manage their ads
-              in a front-end panel. The default listing type is free, but you
-              can elect to charge users to feature their ads in high-traffic
-              site areas for increased engagement and visibility.
+              {ad.description}
             </p>
             
           </div>
