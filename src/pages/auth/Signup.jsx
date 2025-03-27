@@ -1,14 +1,19 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { apiSignup } from '../../services/auth';
 import { Link } from 'react-router';
+import { useNavigate } from 'react-router';
+
 
 const Signup = () => {
+  const navigate = useNavigate() //for navigation
   const handleSubmit = async (event) => {
-    event.preventDefault()  
+    event.preventDefault()
     const formData = new FormData(event.target);
     try {
-     const response= await apiSignup(formData);
-     console.log(response)
+      const response = await apiSignup(formData);
+      const role = response.data.role; //grabing the role
+      console.log(response)
+      navigate('/login');
     } catch (error) {
       console.log(error);
     }
@@ -69,11 +74,11 @@ const Signup = () => {
           </div>
 
           <div>
-          <label htmlFor="business category" className='block text-sm font-medium text-gray-700'>Role</label>
-          <select name='role' className="w-full px-4 py-2 mt-1 border rounded-lg" required>
-            <option  value="user">User</option>
-          </select>
-         </div>
+            <label htmlFor="business category" className='block text-sm font-medium text-gray-700'>Role</label>
+            <select name='role' className="w-full px-4 py-2 mt-1 border rounded-lg" required>
+              <option value="user">User</option>
+            </select>
+          </div>
           <button
             type="submit"
             className="w-full mt-5 bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition duration-200"

@@ -13,6 +13,7 @@ import VendorAds from './pages/dashboard/VendorAds'
 import VenLogin from './pages/auth/VenLogin'
 import Vensignup from './pages/auth/Vensignup'
 import Hero from './pages/user/Hero'
+import Popup from './pages/user/Popup'
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<Hero />} />
+        <Route path='/popup' element={<Popup/>}/>
         
         <Route element={<RootLayout />}>
           <Route path='/landing' element={<Landing />} />

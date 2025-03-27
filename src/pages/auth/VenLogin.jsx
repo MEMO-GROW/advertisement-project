@@ -1,15 +1,24 @@
 import React from 'react'
-import { Link } from 'react-router';
+import { Link, useNavigate } from 'react-router';
 import { apiVendorlogin } from '../../services/auth';
 
 
 const VenLogin = () => {
+  const navigate=useNavigate(); // for nivagtion
   const handleSubmit =async(event) =>{
     event.preventDefault();
     const formData = new FormData(event.target);
     try {
       const res = await apiVendorlogin(formData)
-      localStorage.setItem('token', res.data.accessToken);
+      const role =res.data.role; //grabing the role from the backend
+      localStorage.setItem('token', res.data.accessToken); //saving the role inside the localstorage
+      localStorage.setItem('role',role); //saving the role inside the local storage
+
+      // logic for nagivating roles
+      if(role=== "vendor"){
+        navigate('/dashboard');
+      }
+
       console.log(res);
     } catch (error) {
       console.log(error)
