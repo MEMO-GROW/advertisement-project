@@ -19,12 +19,12 @@ const VenderAdsCard = ({ad}) => {
     <div className="w-full max-w-md bg-white rounded-lg shadow-md overflow-hidden flex flex-col">
       <img
         src={`https://res.cloudinary.com/dnwoobipi/${ad.images[0]}`}
-        https://res.cloudinary.com/dnwoobipi/image/upload
+        
         alt="Life in mountains"
         className="w-full h-50 object-cover"
       />
 
-      {/* Category, Location, Price Row */}
+      
       {/* Category, Location, Price Row */}
       <div className="p-2 flex justify-between items-center text-sm text-gray-500">
         {/* Category */}
