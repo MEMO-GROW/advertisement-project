@@ -10,7 +10,7 @@ const Footer = () => {
           <div className="flex items-center mb-4">
             <img src="/logo.png" alt="Logo" className="h-8 w-auto mr-2" />
             <span className="text-2xl font-bold">
-              MeMo<span className="text-red-500">ads</span>
+              MeMo<span className="text-red-500">Trends</span>
               <sup className="text-sm font-semibold">Pro</sup>
             </span>
           </div>
@@ -34,8 +34,9 @@ const Footer = () => {
         <div>
           <h4 className="font-semibold mb-3">Top Categories</h4>
           <ul className="text-sm space-y-1 text-gray-400">
-            <li>Mobile Phones</li>
-            <li>Electronics</li>
+            <li>Clothings</li>
+            <li>Footwear</li>
+            <li>Bags & Wallets</li>
           </ul>
         </div>
 
