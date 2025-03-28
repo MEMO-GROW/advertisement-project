@@ -15,38 +15,39 @@ import Vensignup from './pages/auth/Vensignup'
 import Hero from './pages/user/Hero'
 import Popup from './pages/user/Popup'
 import Contact from './pages/user/Contact'
+import VendorProfile from "./pages/dashboard/VendorProfile";
+import UpdateProduct from './pages/dashboard/UpdateProduct'
+
+
 
 function App() {
-
-
   return (
-
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<Hero />} />
         <Route path='/popup' element={<Popup/>}/>
         <Route path='/contact' element={<Contact/>}/>
-        
         <Route element={<RootLayout />}>
-          <Route path='/landing' element={<Landing />} />
+          <Route path="/landing" element={<Landing />} />
           <Route path="/adverts" element={<Adverts />} />
           <Route path="/adverts/:id" element={<SingleAd />} />
-
         </Route>
 
-        <Route path='/login' element={<Login />} />
-        <Route path='/signup' element={<Signup />} />
-        <Route path='/venlogin' element={<VenLogin />} />
-        <Route path='/vensignup' element={<Vensignup />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/venlogin" element={<VenLogin />} />
+        <Route path="/vensignup" element={<Vensignup />} />
 
-        <Route path='/dashboard' element={<DashboardLayout />}>
+        <Route path="/dashboard" element={<DashboardLayout />}>
           <Route index={true} element={<Overview />} />
-          <Route path='create-ad' element={<CreateAd />} />
-          <Route path='ads' element={<VendorAds />} />
+          <Route path="create-ad" element={<CreateAd />} />
+          <Route path="ads" element={<VendorAds />} />
+          <Route path="vendor-profile" element={<VendorProfile />} />
+          <Route path='edit/:id' element={<UpdateProduct/>} />
         </Route>
       </Routes>
     </BrowserRouter>
-  )
+  );
 }
 
-export default App
+export default App;

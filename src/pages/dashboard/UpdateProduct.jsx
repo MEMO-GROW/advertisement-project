@@ -1,50 +1,51 @@
-import React, { useState } from "react";
-import { apiAddAdvert } from "../../services/adverts";
-import { useNavigate } from "react-router";
+import React, { useEffect, useState } from 'react'
+import { useNavigate, useParams } from 'react-router'
+import { apiDeleteVendorById, apiGetSingleAd, apiUpdateAdverts } from '../../services/adverts';
 
-
-
-const CreateAd = () => {
+const UpdateProduct = () => {
   const navigate = useNavigate();
-  const [successMessage, setSuccessMessage] = useState("");
+    const [successMessage, setSuccessMessage] = useState("");
   
-  const handleSubmit = async (event) => {
-    event.preventDefault();
 
-    const data = new FormData(event.target);
+  const { id } = useParams();
+
+  const [ad, setAd] = useState({});
+
+  const getAd = async () => {
     try {
-      const response = await apiAddAdvert(data);
-      console.log(response);
+      const response = await apiGetSingleAd(id);
+      setAd(response.data);
 
-      setSuccessMessage("Product added successfully!"); // Set success message
-    
-    // Clear message after 3 seconds
-    setTimeout(() => {
-      setSuccessMessage("");
-      navigate('/dashboard/ads');
-    }, 2000);
-    
-
-
+      
     } catch (error) {
       console.log(error);
     }
   };
+
+  useEffect(() => {
+    getAd();
+  }, []);
+
+
+
+  const handleSubmit = async (event) => {
+      event.preventDefault();
+  
+      const data = new FormData(event.target);
+      try {
+        const response = await apiUpdateAdverts(data);
+        console.log(response);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
+  
   return (
     <div className="flex items-center justify-center min-h-screen ">
       <div className="bg-white shadow-lg rounded-lg p-6 w-[600px] ml-[170px] ">
-
-        {/* ✅ SUCCESS MESSAGE (Appears after adding product) */}
-      {successMessage && (
-        <div className="bg-green-100 text-green-700 p-3 rounded mb-4 text-center">
-          {successMessage}
-        </div>
-      )}
-
-
-
         <div className="flex flex-col justify-center items-center">
-          <h1> Add New Product</h1>
+          <h1> Update Product</h1>
         </div>
         <form onSubmit={handleSubmit} className="space-y-4 pt-5">
           <div className="grid grid-cols-2 gap-4">
@@ -54,6 +55,7 @@ const CreateAd = () => {
               placeholder="Enter Product Name"
               className="w-full border p-3 rounded"
               required
+              defaultValue={ad.productName}
             />
             <input
               type="number"
@@ -61,6 +63,7 @@ const CreateAd = () => {
               placeholder="Enter  Product Price"
               className="w-full border p-3 rounded"
               required
+              defaultValue={ad.price}
             />
           </div>
           <div className="grid grid-cols-2 gap-3">
@@ -93,6 +96,7 @@ const CreateAd = () => {
               placeholder=" Enter Stock Quantity"
               className="w-full border p-3 rounded"
               required
+              defaultValue={ad.stockQuantity}
             />
             <input
               type="text"
@@ -107,19 +111,25 @@ const CreateAd = () => {
             placeholder="Enter Product Discription"
             className="w-full border p-3 rounded"
             required
+            defaultValue={ad.description}
           ></textarea>
 
           <button
             type="submit"
             className="w-full bg-blue-600 text-white p-3 rounded shadow-md hover:bg-blue-700 transition"
           >
-            Add New Product
+            Update Product
           </button>
         </form>
       </div>
-      {/* {forms section starts} */}
+    
     </div>
-  );
-};
+      
 
-export default CreateAd;
+    
+
+  
+  )
+}
+
+export default UpdateProduct

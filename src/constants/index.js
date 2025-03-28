@@ -1,7 +1,7 @@
-import{FileIcon, Home, PlusIcon, Settings, User} from "lucide-react"
+import { FileIcon, Home, PlusIcon, Settings, User } from "lucide-react"
 
-export default{
-    NAVLINKS:[
+export default {
+    NAVLINKS: [
 
         {
             name: "Overview",
@@ -20,12 +20,12 @@ export default{
         },
         {
             name: "Profile",
-            path: "/dashboard",
+            path: "/dashboard/Vendor-profile",
             icon: User,
         },
         {
-            name: "Settings",
-            path: "/dashboard",
+            name: "UpDate Product",
+            path: "/dashboard/edit",
             icon: Settings,
         },
     ]
