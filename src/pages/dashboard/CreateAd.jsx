@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { apiAddAdvert } from "../../services/adverts";
+import { useNavigate } from "react-router";
 
 
 
 const CreateAd = () => {
+  const navigate = useNavigate();
+  const [successMessage, setSuccessMessage] = useState("");
+  
   const handleSubmit = async (event) => {
     event.preventDefault();
 
@@ -11,6 +15,17 @@ const CreateAd = () => {
     try {
       const response = await apiAddAdvert(data);
       console.log(response);
+
+      setSuccessMessage("Product added successfully!"); // Set success message
+    
+    // Clear message after 3 seconds
+    setTimeout(() => {
+      setSuccessMessage("");
+      navigate('/dashboard/ads');
+    }, 2000);
+    
+
+
     } catch (error) {
       console.log(error);
     }
@@ -18,6 +33,16 @@ const CreateAd = () => {
   return (
     <div className="flex items-center justify-center min-h-screen ">
       <div className="bg-white shadow-lg rounded-lg p-6 w-[600px] ml-[170px] ">
+
+        {/* ✅ SUCCESS MESSAGE (Appears after adding product) */}
+      {successMessage && (
+        <div className="bg-green-100 text-green-700 p-3 rounded mb-4 text-center">
+          {successMessage}
+        </div>
+      )}
+
+
+
         <div className="flex flex-col justify-center items-center">
           <h1> Add New Product</h1>
         </div>
