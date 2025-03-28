@@ -2,7 +2,8 @@ import { apiClient } from "./config";
 
 export const apiAddAdvert = async (payload) => apiClient.post("/ads", payload);
 
-export const apiGetAllAdverts = async () => apiClient.get("/ad");
+export const apiGetAllAdverts = async (filter = {}) =>
+  apiClient.get(`/ads?filter=${JSON.stringify(filter)}`);
 
 export const apiGetVendorAdverts = async () => apiClient.get("/ad");
 

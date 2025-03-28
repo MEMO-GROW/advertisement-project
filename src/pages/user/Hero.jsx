@@ -7,7 +7,7 @@ const Hero = () => {
       <div className="bg-black opacity-60 w-full h-full  absolute"></div>
         <div className='relative w-[70%] flex flex-col justify-center px-4 sm:px-6 lg:px-8 h-full'>
         <div className='w-[100%]  max-w-5xl mx-auto text-center'>
-            <h1 className='tracking-widest font-extrabold text-white sm:text-5xl md:text-8xl'>MEMO</h1>
+            <h1 className='tracking-widest font-extrabold text-white sm:text-5xl md:text-8xl'>MEMO_TRENDS</h1>
            <p className='mt-3 text-2xl text-gray-300'>Redefining Fashion. Inspiring Confidence</p>
         </div>
 
