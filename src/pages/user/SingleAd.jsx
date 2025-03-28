@@ -52,7 +52,7 @@ const SingleAd = () => {
             <span className="inline-flex items-center gap-1">
               <span>
                 {/* change this  */}
-                <HeartCrack />
+                <h1>GHS</h1>
               </span>
               <span>{ad.price}</span>
             </span>
@@ -61,12 +61,12 @@ const SingleAd = () => {
           {/* Ad Owner with Contact Information */}
           <div className="bg-white rounded-2xl shadow p-4">
             <h3 className="font-bold  text-gray-700 mb-2 text-[1rem] ">
-              Contact informationjjj
+              Vendor Contaact Information
             </h3>
             <div className="space-y-2 text-sm text-gray-700">
               <p>
-                <span className="font-semibold text-gray-900">Name:</span> John
-                Doe
+                <span className="font-semibold text-gray-900">Name:</span> DidyMus
+            
               </p>
               <p>
                 <span className="font-semibold text-gray-900">Phone:</span> +1

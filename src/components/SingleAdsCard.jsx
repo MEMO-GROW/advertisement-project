@@ -34,7 +34,7 @@ const SingleAdsCard = () => {
             <span className="inline-flex items-center gap-1">
               <span>
                 {/* change this  */}
-                <HeartCrackIcon />
+                <h1>GHS</h1>
               </span>
               <span>{ad.price}</span>
             </span>

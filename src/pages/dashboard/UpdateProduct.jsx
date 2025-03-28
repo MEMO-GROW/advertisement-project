@@ -3,7 +3,9 @@ import { useNavigate, useParams } from 'react-router'
 import { apiDeleteVendorById, apiGetSingleAd, apiUpdateAdverts } from '../../services/adverts';
 
 const UpdateProduct = () => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
+    const [successMessage, setSuccessMessage] = useState("");
+  
 
   const { id } = useParams();
 
@@ -13,6 +15,8 @@ const UpdateProduct = () => {
     try {
       const response = await apiGetSingleAd(id);
       setAd(response.data);
+
+      
     } catch (error) {
       console.log(error);
     }
@@ -114,7 +118,7 @@ const UpdateProduct = () => {
             type="submit"
             className="w-full bg-blue-600 text-white p-3 rounded shadow-md hover:bg-blue-700 transition"
           >
-            Add New Product
+            Update Product
           </button>
         </form>
       </div>
