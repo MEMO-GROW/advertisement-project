@@ -7,8 +7,8 @@ export const apiAddAdvert = async (payload) =>
     },
   });
 
-export const apiGetAllAdverts = async () =>
-  apiClient.get("/ads", {
+export const apiGetAllAdverts = async (filter = {}) =>
+  apiClient.get(`/ads?filter=${JSON.stringify(filter)}`, {
     headers: {
       Authorization: `Bearer ${localStorage.getItem("token")}`,
     },

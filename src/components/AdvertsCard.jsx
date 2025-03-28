@@ -30,7 +30,7 @@ const AdvertsCard = ({ad}) => {
 
       <div className="p-2 flex flex-col flex-grow">
         <h2 className="text-md font-semibold text-gray-800 mb-2 truncate">
-          {ad.productname}
+          {ad.productName}
         </h2>
 
         {/* Description */}

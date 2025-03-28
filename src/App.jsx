@@ -14,6 +14,7 @@ import VenLogin from './pages/auth/VenLogin'
 import Vensignup from './pages/auth/Vensignup'
 import Hero from './pages/user/Hero'
 import Popup from './pages/user/Popup'
+import Contact from './pages/user/Contact'
 
 function App() {
 
@@ -24,6 +25,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Hero />} />
         <Route path='/popup' element={<Popup/>}/>
+        <Route path='/contact' element={<Contact/>}/>
         
         <Route element={<RootLayout />}>
           <Route path='/landing' element={<Landing />} />
